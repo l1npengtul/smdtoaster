@@ -1,0 +1,31 @@
+[package]
+name = "smdtoaster"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build]
+target = "avr-unknown-gnu-atmega328"
+
+[dependencies]
+lcd = "0.4.1"
+sb-rotary-encoder = "0.1.0"
+avrd = "1.0.0"
+avr-std-stub = "1.0.3"
+avr_delay = "0.3.2"
+
+[dependencies.postcard]
+version = "1.0.4"
+features = ["alloc"]
+
+[dependencies.serde]
+version = "1.0"
+default-features = false
+
+[dependencies.ruduino]
+git = "https://github.com/avr-rust/ruduino.git"
+branch = "master"
+
+[unstable]
+build-std = ["core", "alloc"]
